@@ -22,7 +22,7 @@ if st.button('CHECK'):
         st.header('that Its a Cat')
     else:
         probability = result[0][0]
-        st.header("We are " + probability)
+        st.header("We are ", probability)
         st.header('that Its a Dog')
     image1 = load_img(input_image)
     image1 = img_to_array(image1)
