@@ -18,7 +18,7 @@ if st.button('CHECK'):
     result = model.predict(predict_modified)
     if result < 0.5:
         probability = 1 - result[0][0]
-        if probability<0.55:
+        if probability<0.60:
             st.write('We are little confused here as we are only ', probability*100, '% sure that its a Cat')
             st.header('CAT')
         else:
@@ -26,7 +26,7 @@ if st.button('CHECK'):
             st.header('CAT')
     else:
         probability = result[0][0]
-        if probability<0.55:
+        if probability<0.60:
             st.write('We are little confused here as we are only ', probability*100, '% sure that its a Dog')
             st.header('DOG')
         else:
