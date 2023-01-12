@@ -44,14 +44,14 @@ if st.button('CHECK'):
     st.image(image1, width=500)
     st.markdown("Did we guessed it right ?")
         
-if "button_clicked" not in st.session_state:    
-    st.session_state.button_clicked = False
+    if "button_clicked" not in st.session_state:    
+        st.session_state.button_clicked = False
 
-if (    
-st.button("Open next part")     
-or st.session_state.button_clicked   
- ):    
-    if st.button("Pop out balloons"): 
-        st.write("drd")
-    
+    if (    
+    st.button("Open next part")     
+    or st.session_state.button_clicked   
+     ):    
+        if st.button("Pop out balloons"): 
+            st.write("drd")
+
 
