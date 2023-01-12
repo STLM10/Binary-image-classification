@@ -44,8 +44,8 @@ if st.button('CHECK'):
     st.image(image1, width=500)
     st.markdown("Did we guessed it right ?")
     if st.button('YES'):
-        st.header("YAY !!!")
+        st.write("YAY !!!")
     if st.button('NO'):
-        st.header("We are very sorry, we will try make better prediction in future")
+        st.write("We are very sorry, we will try make better prediction in future")
     
 
