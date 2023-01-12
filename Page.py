@@ -11,16 +11,17 @@ model.compile()
 st.title('Cat & Dog Image Classifier')
 input_image = st.file_uploader('Upload image')
 
-button1 = st.button('Start the prediction')
-if st.session_state.get('CHECK') != True:
+#button1 = st.button('Start the prediction')
+#if st.session_state.get('CHECK') != True:
 
-    st.session_state['CHECK'] = button1 # Saved the state
-
-
+#    st.session_state['CHECK'] = button1 # Saved the state
 
 
 
-if st.session_state['CHECK'] == True:
+
+
+#if st.session_state['CHECK'] == True:
+if st.button('CHECK'):
     predict = load_img(input_image, target_size=(64, 64))
     predict_modified = img_to_array(predict)
     predict_modified = predict_modified / 255
@@ -57,7 +58,7 @@ if st.session_state['CHECK'] == True:
         st.write("YAY !!!")
     if st.button('NO'):
         st.write('Sorry for this time, we will try to improve our prediction')
-        st.button('OK')
+        
     
    
 
