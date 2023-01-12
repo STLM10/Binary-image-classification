@@ -2,6 +2,7 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
+import SessionState
 
 import numpy as np
 model = load_model('Model',compile=False)
@@ -10,9 +11,19 @@ model.compile()
 st.title('Cat & Dog Image Classifier')
 input_image = st.file_uploader('Upload image')
 
+button1 = st.empty()
+text1 = st.empty()
+button2 = st.empty()
+text2 = st.empty()
+
+ss = SessionState.get(button1 = False)
+
+if button1.button('CHECK') :
+    ss.button1 = True
 
 
-if st.button('CHECK'):
+
+if ss.button1:
     predict = load_img(input_image, target_size=(64, 64))
     predict_modified = img_to_array(predict)
     predict_modified = predict_modified / 255
@@ -44,6 +55,8 @@ if st.button('CHECK'):
     image1 = image1/255.0
 
     st.image(image1, width=500)
+    if button2.button('YES'):
+        text2.write('you clicked the second button')
    
 
 
