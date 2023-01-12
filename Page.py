@@ -57,12 +57,12 @@ if st.button('CHECK'):
     with st.form("key1"):
     # ask for input
         st.write("YES")
-        button_check = st.form_submit_button("ONE MORE")
+        button_check = st.form_submit_button("Once more ??")
     
     with st.form("key2"):
     # ask for input
         st.write("NO")
-        button_check = st.form_submit_button("TRY AGAIN")
+        button_check = st.form_submit_button("Try again with different picture")
     #if st.button('YES'):
     #    st.write("YAY !!!")
     #if st.button('NO'):
