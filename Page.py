@@ -57,6 +57,7 @@ if st.session_state['CHECK'] == True:
         st.write("YAY !!!")
     if st.button('NO'):
         st.write('Sorry for this time, we will try to improve our prediction')
+        st.button('OK')
     
    
 
