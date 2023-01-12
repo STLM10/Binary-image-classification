@@ -2,7 +2,7 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
-import SessionState
+#import SessionState
 
 import numpy as np
 model = load_model('Model',compile=False)
@@ -16,7 +16,7 @@ text1 = st.empty()
 button2 = st.empty()
 text2 = st.empty()
 
-ss = SessionState.get(button1 = False)
+ss = st.session_state.get(button1 = False)
 
 if button1.button('CHECK') :
     ss.button1 = True
