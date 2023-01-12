@@ -18,12 +18,20 @@ if st.button('CHECK'):
     result = model.predict(predict_modified)
     if result < 0.5:
         probability = 1 - result[0][0]
-        st.write('We are ', probability*100, '% sure that its a Cat')
-        st.header('CAT')
+        if probability<0.55:
+            st.write('We are little confused here as we are only ', probability*100, '% sure that its a Cat')
+            st.header('CAT')
+        else:
+            st.write('We are ', probability*100, '% sure that its a Cat')
+            st.header('CAT')
     else:
         probability = result[0][0]
-        st.write('We are ', probability*100, '% sure that its a Dog')
-        st.header('DOG')
+        if probability<0.55:
+            st.write('We are little confused here as we are only ', probability*100, '% sure that its a Dog')
+            st.header('DOG')
+        else:
+            st.write('We are ', probability*100, '% sure that its a Dog')
+            st.header('DOG')
     image1 = load_img(input_image)
     image1 = img_to_array(image1)
     image1 = np.array(image1)
