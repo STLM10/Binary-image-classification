@@ -11,19 +11,15 @@ model.compile()
 st.title('Cat & Dog Image Classifier')
 input_image = st.file_uploader('Upload image')
 
-button1 = st.empty()
-text1 = st.empty()
-button2 = st.empty()
-text2 = st.empty()
+if st.session_state.get('CHECK') != True:
 
-ss = st.session_state.get(button1 = False)
-
-if button1.button('CHECK') :
-    ss.button1 = True
+    st.session_state['CHECK'] = button1 # Saved the state
 
 
 
-if ss.button1:
+
+
+if st.session_state['CHECK'] == True:
     predict = load_img(input_image, target_size=(64, 64))
     predict_modified = img_to_array(predict)
     predict_modified = predict_modified / 255
@@ -55,8 +51,9 @@ if ss.button1:
     image1 = image1/255.0
 
     st.image(image1, width=500)
-    if button2.button('YES'):
-        text2.write('you clicked the second button')
+    if st.button('Check 2'):
+
+        st.write("Do your logic here")
    
 
 
