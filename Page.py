@@ -52,6 +52,6 @@ st.button("Open next part")
 or st.session_state.button_clicked   
  ):    
     if st.button("Pop out balloons"): 
-  
+        st.write("drd")
     
 
