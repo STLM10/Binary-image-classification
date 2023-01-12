@@ -31,6 +31,9 @@ if st.button('CHECK'):
         if probability<0.60:
             st.write('We are little confused here as we are only ', probability*100, '% sure that its a Dog')
             st.header('DOG')
+            st.markdown("Did we guessed it right ?")
+            if st.button('YES'):
+                st.write("YAY !!!")
             
         else:
             st.write('We are ', probability*100, '% sure that its a Dog')
@@ -42,10 +45,6 @@ if st.button('CHECK'):
     image1 = image1/255.0
 
     st.image(image1, width=500)
-    st.markdown("Did we guessed it right ?")
-    if st.button('YES'):
-        st.write("YAY !!!")
-    if st.button('NO'):
-        st.write("We are very sorry, we will try make better prediction in future")
+  
     
 
