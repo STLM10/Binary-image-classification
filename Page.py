@@ -54,10 +54,15 @@ if st.button('CHECK'):
 
     st.image(image1, width=500)
     st.markdown('Did we guessed it right ?')
-    if st.button('YES'):
+    with st.form("key1"):
+    # ask for input
         st.write("YAY !!!")
-    if st.button('NO'):
-        st.write('Sorry for this time, we will try to improve our prediction')
+        button_check = st.form_submit_button("Button to Click")
+    
+    #if st.button('YES'):
+    #    st.write("YAY !!!")
+    #if st.button('NO'):
+    #    st.write('Sorry for this time, we will try to improve our prediction')
         
     
    
