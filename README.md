@@ -1,4 +1,6 @@
 # Image-reconstruction-and-classification
+Link for Streamlit Platform : https://stlm10-binary-image-classification-page-tbwbhv.streamlit.app/
+
 Done under Deep Learning in mechanical sciences(ME698G) course, IIT Kanpur
 
 #### Binary image classification is done on data-set containing images of dogs and cats
