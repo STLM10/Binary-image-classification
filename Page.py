@@ -11,6 +11,7 @@ model.compile()
 st.title('Cat & Dog Image Classifier')
 input_image = st.file_uploader('Upload image')
 
+button1 = st.button('Recommend')
 if st.session_state.get('CHECK') != True:
 
     st.session_state['CHECK'] = button1 # Saved the state
