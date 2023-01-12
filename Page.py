@@ -21,22 +21,26 @@ if st.button('CHECK'):
         if probability<0.60:
             st.write('We are little confused here as we are only ', probability*100, '% sure that its a Cat')
             st.header('CAT')
+            st.footer("Did we guess it right ?")
         else:
             st.write('We are ', probability*100, '% sure that its a Cat')
             st.header('CAT')
+            st.footer("Did we guess it right ?")
     else:
         probability = result[0][0]
         if probability<0.60:
             st.write('We are little confused here as we are only ', probability*100, '% sure that its a Dog')
             st.header('DOG')
+            st.footer("Did we guess it right ?")
         else:
             st.write('We are ', probability*100, '% sure that its a Dog')
             st.header('DOG')
+            st.footer("Did we guess it right ?")
     image1 = load_img(input_image)
     image1 = img_to_array(image1)
     image1 = np.array(image1)
     image1 = image1/255.0
 
     st.image(image1, width=500)
-    st.footer("Did we guess it right ?")
+    
 
