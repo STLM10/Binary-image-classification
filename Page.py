@@ -38,4 +38,5 @@ if st.button('CHECK'):
     image1 = image1/255.0
 
     st.image(image1, width=500)
+    st.footer("Did we guess it right ?")
 
