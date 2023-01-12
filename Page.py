@@ -59,7 +59,7 @@ if st.button('CHECK'):
         st.write("YES")
         button_check = st.form_submit_button("ONE MORE")
     
-    with st.form("key1"):
+    with st.form("key2"):
     # ask for input
         st.write("NO")
         button_check = st.form_submit_button("TRY AGAIN")
