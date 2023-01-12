@@ -19,12 +19,11 @@ if st.button('CHECK'):
     if result < 0.5:
         probability = 1 - result[0][0]
         st.write('We are ', probability*100, '% sure that its a Cat')
-        st.header('that Its a Cat')
+        st.header('CAT')
     else:
         probability = result[0][0]
-        st.header("We are ")
-        st.header(probability*100)
-        st.header('percent sure that Its a Dog')
+        st.write('We are ', probability*100, '% sure that its a Dog')
+        st.header('DOG')
     image1 = load_img(input_image)
     image1 = img_to_array(image1)
     image1 = np.array(image1)
