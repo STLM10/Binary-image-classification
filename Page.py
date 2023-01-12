@@ -56,9 +56,13 @@ if st.button('CHECK'):
     st.markdown('Did we guessed it right ?')
     with st.form("key1"):
     # ask for input
-        st.write("YAY !!!")
-        button_check = st.form_submit_button("Button to Click")
+        st.write("YES")
+        button_check = st.form_submit_button("ONE MORE")
     
+    with st.form("key1"):
+    # ask for input
+        st.write("NO")
+        button_check = st.form_submit_button("TRY AGAIN")
     #if st.button('YES'):
     #    st.write("YAY !!!")
     #if st.button('NO'):
