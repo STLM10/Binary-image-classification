@@ -11,7 +11,7 @@ model.compile()
 st.title('Cat & Dog Image Classifier')
 input_image = st.file_uploader('Upload image')
 
-button1 = st.button('Recommend')
+button1 = st.button('CHECK')
 if st.session_state.get('CHECK') != True:
 
     st.session_state['CHECK'] = button1 # Saved the state
@@ -52,9 +52,11 @@ if st.session_state['CHECK'] == True:
     image1 = image1/255.0
 
     st.image(image1, width=500)
-    if st.button('Check 2'):
-
-        st.write("Do your logic here")
+    st.markdown('Did we guessed it right ?')
+    if st.button('YES'):
+        st.write("YAY !!!")
+    if st.button('NO'):
+        st.write('Sorry for this time, we will try to improve our prediction')
    
 
 
