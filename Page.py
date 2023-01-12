@@ -55,8 +55,10 @@ if st.session_state['CHECK'] == True:
     st.markdown('Did we guessed it right ?')
     if st.button('YES'):
         st.write("YAY !!!")
+        st.session_state['button'] != button1
     if st.button('NO'):
         st.write('Sorry for this time, we will try to improve our prediction')
+    
    
 
 
