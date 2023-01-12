@@ -57,7 +57,7 @@ if st.button('CHECK'):
     with st.form("key1"):
     # ask for input
         st.write("YES")
-        button_check = st.form_submit_button("Once more ??")
+        button_check = st.form_submit_button("Good Prediction this time")
     
     with st.form("key2"):
     # ask for input
