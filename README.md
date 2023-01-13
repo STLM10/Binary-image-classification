@@ -1,5 +1,6 @@
 # Image-reconstruction-and-classification
-Prepared a CNN model (link given bellow) for image classification
+##Prepared a CNN model (link given bellow) for image classification
+
 Link for Streamlit Platform : https://stlm10-binary-image-classification-page-tbwbhv.streamlit.app/
 
 Also done as assignment under Deep Learning in mechanical sciences(ME698G) course, IIT Kanpur
